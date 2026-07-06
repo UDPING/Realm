@@ -13,9 +13,7 @@
   ·
   <a href="releases/v0.1.0/macOS/Realm-macOS.dmg">macOS DMG</a>
   ·
-  <a href="releases/v0.1.0/macOS/Realm-macOS.zip">macOS ZIP</a>
-  ·
-  <a href="releases/v0.1.0/Windows/BUILD_ON_WINDOWS.md">Windows build notes</a>
+  <a href="releases/v0.1.0/Windows/BUILD_ON_WINDOWS.md">Windows EXE pending</a>
 </p>
 
 <p align="center">
@@ -67,10 +65,9 @@ Realm is designed for people who switch between multiple Claude Desktop and Open
 
 ### macOS
 
-Download one of the local release artifacts:
+Download the macOS installer:
 
 - [Realm-macOS.dmg](releases/v0.1.0/macOS/Realm-macOS.dmg)
-- [Realm-macOS.zip](releases/v0.1.0/macOS/Realm-macOS.zip)
 
 Open the DMG, drag `Realm.app` into `Applications`, then launch Realm. The DMG uses a custom Finder layout with a clean installation background.
 
@@ -78,12 +75,11 @@ Checksums:
 
 ```text
 13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  Realm-macOS.dmg
-121ff451f6a1d583652037746425dc41d72905bb070cc0103bb51c0db533e94c  Realm-macOS.zip
 ```
 
 ### Windows
 
-Windows packaging requires a Windows 11 machine with Visual Studio, Windows App SDK, and .NET 9. This macOS workstation cannot produce the WinUI 3 package directly.
+The Windows release should be published as `Realm-Windows.exe`. Windows packaging requires a Windows 11 machine with Visual Studio, Windows App SDK, and .NET 9. This macOS workstation cannot produce the WinUI 3 installer directly.
 
 See [Windows build notes](releases/v0.1.0/Windows/BUILD_ON_WINDOWS.md).
 

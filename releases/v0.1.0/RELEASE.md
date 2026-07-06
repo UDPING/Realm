@@ -9,10 +9,10 @@ Repository: [UDPING/Realm](https://github.com/UDPING/Realm)
 macOS:
 
 - [Realm-macOS.dmg](macOS/Realm-macOS.dmg)
-- [Realm-macOS.zip](macOS/Realm-macOS.zip)
 
 Windows:
 
+- `Realm-Windows.exe` is the required Windows installer artifact.
 - Windows build requires Windows 11, Visual Studio 2022, Windows App SDK, and .NET 9.
 - See [BUILD_ON_WINDOWS.md](Windows/BUILD_ON_WINDOWS.md).
 
@@ -20,7 +20,6 @@ Windows:
 
 ```text
 13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  macOS/Realm-macOS.dmg
-121ff451f6a1d583652037746425dc41d72905bb070cc0103bb51c0db533e94c  macOS/Realm-macOS.zip
 ```
 
 ## Notes
