@@ -77,7 +77,7 @@ Open the DMG, drag `Realm.app` into `Applications`, then launch Realm. The DMG u
 Checksums:
 
 ```text
-209e07a02c561250444829c2a6424ec0fe8817e011eade413f4c89d101ff7909  Realm-macOS.dmg
+13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  Realm-macOS.dmg
 121ff451f6a1d583652037746425dc41d72905bb070cc0103bb51c0db533e94c  Realm-macOS.zip
 ```
 
