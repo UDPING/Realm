@@ -19,7 +19,7 @@ Windows:
 
 ```text
 13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  macOS/Realm-macOS.dmg
-ede2667a4bc4f157a5b97a96135ae79c1d025fef22bd7b8992499d358fb79c49  Windows/Realm-Windows.exe
+1a8b1d3820e348ceacceb7e2e68dd9a2c27bb7b7ce5e1e073bb714cd553ca638  Windows/Realm-Windows.exe
 ```
 
 ## Notes
@@ -32,3 +32,4 @@ ede2667a4bc4f157a5b97a96135ae79c1d025fef22bd7b8992499d358fb79c49  Windows/Realm-
 - Windows installer validation passed with exit code 0 in a Windows 11 VM.
 - Windows installer now installs first and leaves launch to the Start Menu to avoid non-interactive installer-session WinUI crashes.
 - Windows App SDK runtime files are bundled to avoid the Windows App Runtime 1.5 install prompt.
+- Windows payload now includes the generated `WorkspaceHub.pri` WinUI resource file; interactive launch was verified in the active Windows console session.

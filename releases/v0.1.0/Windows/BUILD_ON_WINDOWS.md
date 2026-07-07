@@ -14,3 +14,5 @@ The script publishes a self-contained `win-x64` build. The release installer emb
 ```text
 dist\Windows\Realm-Windows.exe
 ```
+
+The payload must include `WorkspaceHub.pri`; without it, WinUI can fail during XAML startup with native `combase.dll` crashes.
