@@ -74,7 +74,7 @@ Open the DMG, drag `Realm.app` into `Applications`, then launch Realm. The DMG u
 Checksums:
 
 ```text
-13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  Realm-macOS.dmg
+2dc125805090651449952db03ddbda31e6a61f1d56bd7b2cc52018177897d201  Realm-macOS.dmg
 ```
 
 ### Windows
@@ -88,7 +88,7 @@ Run `Realm-Windows.exe` to install Realm into your local Programs folder and cre
 Checksum:
 
 ```text
-1a8b1d3820e348ceacceb7e2e68dd9a2c27bb7b7ce5e1e073bb714cd553ca638  Realm-Windows.exe
+0c362cec3352b3044699f8860dab72519d65983f031a5fbb86aaedeab353f06c  Realm-Windows.exe
 ```
 
 ## Local Data

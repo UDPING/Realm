@@ -18,8 +18,8 @@ Windows:
 ## Checksums
 
 ```text
-13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  macOS/Realm-macOS.dmg
-1a8b1d3820e348ceacceb7e2e68dd9a2c27bb7b7ce5e1e073bb714cd553ca638  Windows/Realm-Windows.exe
+2dc125805090651449952db03ddbda31e6a61f1d56bd7b2cc52018177897d201  macOS/Realm-macOS.dmg
+0c362cec3352b3044699f8860dab72519d65983f031a5fbb86aaedeab353f06c  Windows/Realm-Windows.exe
 ```
 
 ## Notes
@@ -33,3 +33,5 @@ Windows:
 - Windows installer now installs first and leaves launch to the Start Menu to avoid non-interactive installer-session WinUI crashes.
 - Windows App SDK runtime files are bundled to avoid the Windows App Runtime 1.5 install prompt.
 - Windows payload now includes the generated `WorkspaceHub.pri` WinUI resource file; interactive launch was verified in the active Windows console session.
+- Windows shell was rebuilt as a native programmatic WinUI layout matching the macOS Realm design, avoiding the prior RootView XAML parse crash path.
+- Installer-installed Windows launch was verified from `%LOCALAPPDATA%\Programs\Realm`; the app remained alive after delayed checks and produced no startup error file.
