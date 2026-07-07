@@ -88,7 +88,7 @@ Run `Realm-Windows.exe` to install Realm into your local Programs folder and cre
 Checksum:
 
 ```text
-48828265170da22a5671e54efab318926bb6e4c61e30b93f442cc9450648fa2f  Realm-Windows.exe
+ede2667a4bc4f157a5b97a96135ae79c1d025fef22bd7b8992499d358fb79c49  Realm-Windows.exe
 ```
 
 ## Local Data

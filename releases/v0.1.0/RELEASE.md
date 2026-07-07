@@ -19,7 +19,7 @@ Windows:
 
 ```text
 13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  macOS/Realm-macOS.dmg
-48828265170da22a5671e54efab318926bb6e4c61e30b93f442cc9450648fa2f  Windows/Realm-Windows.exe
+ede2667a4bc4f157a5b97a96135ae79c1d025fef22bd7b8992499d358fb79c49  Windows/Realm-Windows.exe
 ```
 
 ## Notes
@@ -30,4 +30,5 @@ Windows:
 - Realm does not modify third-party app bundles.
 - macOS package verification passed with `codesign --verify` and `hdiutil verify`.
 - Windows installer validation passed with exit code 0 in a Windows 11 VM.
+- Windows installer now installs first and leaves launch to the Start Menu to avoid non-interactive installer-session WinUI crashes.
 - Windows App SDK runtime files are bundled to avoid the Windows App Runtime 1.5 install prompt.
