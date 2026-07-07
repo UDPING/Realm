@@ -83,12 +83,12 @@ Download the Windows installer:
 
 - [Realm-Windows.exe](releases/v0.1.0/Windows/Realm-Windows.exe)
 
-Run `Realm-Windows.exe` to install Realm into your local Programs folder and create a Start Menu shortcut.
+Run `Realm-Windows.exe` to install Realm into your local Programs folder and create a Start Menu shortcut. The Windows App SDK runtime is bundled with the app.
 
 Checksum:
 
 ```text
-da76f05dcc328620dd34041832c2fa6cd8b9951684d1be97cfbbd8404beb1d5b  Realm-Windows.exe
+48828265170da22a5671e54efab318926bb6e4c61e30b93f442cc9450648fa2f  Realm-Windows.exe
 ```
 
 ## Local Data
