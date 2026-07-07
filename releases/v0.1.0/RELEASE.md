@@ -12,14 +12,14 @@ macOS:
 
 Windows:
 
-- `Realm-Windows.exe` is the required Windows installer artifact.
-- Windows build requires Windows 11, Visual Studio 2022, Windows App SDK, and .NET 9.
+- [Realm-Windows.exe](Windows/Realm-Windows.exe)
 - See [BUILD_ON_WINDOWS.md](Windows/BUILD_ON_WINDOWS.md).
 
 ## Checksums
 
 ```text
 13d5b472b3b44040d1fd4e64f59aee4c9c0af68fc451800b4e2d43fc5f132397  macOS/Realm-macOS.dmg
+da76f05dcc328620dd34041832c2fa6cd8b9951684d1be97cfbbd8404beb1d5b  Windows/Realm-Windows.exe
 ```
 
 ## Notes
@@ -29,3 +29,4 @@ Windows:
 - Codex and Claude profiles use separate local data paths.
 - Realm does not modify third-party app bundles.
 - macOS package verification passed with `codesign --verify` and `hdiutil verify`.
+- Windows installer validation passed with exit code 0 in a Windows 11 VM.

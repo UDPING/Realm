@@ -13,7 +13,7 @@
   ·
   <a href="releases/v0.1.0/macOS/Realm-macOS.dmg">macOS DMG</a>
   ·
-  <a href="releases/v0.1.0/Windows/BUILD_ON_WINDOWS.md">Windows EXE pending</a>
+  <a href="releases/v0.1.0/Windows/Realm-Windows.exe">Windows EXE</a>
 </p>
 
 <p align="center">
@@ -79,9 +79,17 @@ Checksums:
 
 ### Windows
 
-The Windows release should be published as `Realm-Windows.exe`. Windows packaging requires a Windows 11 machine with Visual Studio, Windows App SDK, and .NET 9. This macOS workstation cannot produce the WinUI 3 installer directly.
+Download the Windows installer:
 
-See [Windows build notes](releases/v0.1.0/Windows/BUILD_ON_WINDOWS.md).
+- [Realm-Windows.exe](releases/v0.1.0/Windows/Realm-Windows.exe)
+
+Run `Realm-Windows.exe` to install Realm into your local Programs folder and create a Start Menu shortcut.
+
+Checksum:
+
+```text
+da76f05dcc328620dd34041832c2fa6cd8b9951684d1be97cfbbd8404beb1d5b  Realm-Windows.exe
+```
 
 ## Local Data
 
