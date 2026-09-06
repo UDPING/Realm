@@ -1,165 +1,83 @@
 <p align="center">
-  <img src="docs/assets/realm-icon.png" width="84" alt="Realm app icon">
+  <img src="docs/assets/realm-icon.png" width="72" alt="Realm">
 </p>
 
-<h1 align="center">Realm <sub>v0.1.0</sub></h1>
-
+<h1 align="center">Realm</h1>
+<p align="center">Your accounts. One workspace.</p>
 <p align="center">
-  A native desktop workspace for keeping Codex and Claude account profiles separate, fast, and local.
+  A native Mac app for Codex, Claude, and your local models.
 </p>
-
 <p align="center">
-  <a href="https://github.com/UDPING/Realm">UDPING/Realm</a>
-  ·
-  <a href="releases/v0.1.0/macOS/Realm-macOS.dmg">macOS DMG</a>
-  ·
-  <a href="releases/v0.1.0/Windows/Realm-Windows.exe">Windows EXE</a>
+  <a href="https://github.com/UDPING/Realm/releases/download/v0.2.0/Realm-macOS.dmg"><strong>Download for macOS</strong></a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/UDPING/Realm/releases/tag/v0.2.0">What’s new in 0.2.0</a>
 </p>
+<p align="center"><sub>Apple silicon · macOS 14 or later</sub></p>
 
-<p align="center">
-  <img src="docs/screenshots/realm-dashboard.png" alt="Realm dashboard screenshot">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/realm-profile.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/screenshots/realm-profile-light.png">
+  <img src="docs/screenshots/realm-profile.png" alt="Realm profile with account details, remaining Codex usage, and reset times">
+</picture>
 
-## Overview
+### A little less switching.
 
-Realm is a native desktop application for macOS and Windows that gives supported AI desktop apps a unified workspace manager. It detects installed apps, creates named profiles for different accounts, launches each profile with separate local data paths, and keeps workspace notes, tags, settings, and activity history in local JSON.
+Keep personal and work accounts in named profiles. Open the one you need, see what’s running, and pick up where you left off.
 
-Realm is designed for people who switch between multiple Claude Desktop and OpenAI Codex accounts and do not want repeated sign-out/sign-in cycles. It does not patch, modify, inject into, or replace the supported apps.
+- **Accounts at a glance.** Email, plan, remaining Codex limits, and reset times for the selected profile.
+- **Your models, together.** Browse Ollama and LM Studio libraries and chat through their local servers.
+- **Made for your Mac.** Light, Dark, or System appearance. Four accent colors. English, فارسی, and Русский.
 
-## Supported Apps
+### Local models. Familiar tools.
 
-| App | Status | Profile isolation |
-| --- | --- | --- |
-| OpenAI Codex | Detect, launch, reveal, running status | Separate home, cache, temp, user-data, logs, and crash roots |
-| Claude Desktop | Detect, launch, reveal, running status | Separate user data, cache, temp, logs, and crash roots |
+Realm discovers existing model libraries, including GGUF and LM Studio MLX models, without copying the weights. Start a provider, choose a model, and open a chat.
 
-## Screenshots
+<img src="docs/screenshots/realm-local-models.png" alt="Realm’s local-model library with Ollama and LM Studio">
 
-| Applications | Profile |
+<details>
+<summary>Explore the interface</summary>
+
+**Your workspace**
+
+<img src="docs/screenshots/realm-dashboard.png" alt="Realm dashboard with recent profiles and local providers">
+
+**Applications**
+
+<img src="docs/screenshots/realm-applications.png" alt="Applications with green Running and blue Installed status badges">
+
+**Make it yours**
+
+<img src="docs/screenshots/realm-settings.png" alt="Realm appearance settings with themes, accent colors, and language selection">
+
+Screenshots use sample accounts and usage data.
+
+</details>
+
+### Get started
+
+1. Download the [macOS installer](https://github.com/UDPING/Realm/releases/download/v0.2.0/Realm-macOS.dmg).
+2. Open it and drag **Realm** to **Applications**. Quit an older copy before replacing it.
+3. Open Realm, create a Codex or Claude profile, and sign in through that app.
+
+Codex and Claude must be installed separately. Local chat requires Ollama or LM Studio and a downloaded model. Claude usage is available in Claude’s own settings.
+
+This build is ad-hoc signed and is not Apple-notarized. macOS may require approval in **System Settings → Privacy & Security** on first launch. [Release notes and checksums](https://github.com/UDPING/Realm/releases/tag/v0.2.0) accompany every download.
+
+### Thoughtfully local
+
+Profile metadata stays in `~/Library/Application Support/Realm/`. Account sessions are separate; supported project and chat data can be shared between profiles. Realm leaves the installed Codex and Claude apps intact.
+
+Account checks contact the provider through Codex. Local-model chats use your local server. Update checks fetch releases from this repository.
+
+| Action | Shortcut |
 | --- | --- |
-| <img src="docs/screenshots/realm-applications.png" alt="Realm applications view"> | <img src="docs/screenshots/realm-profile.png" alt="Realm profile details view"> |
+| New profile | ⌘ N |
+| Find a profile | ⌘ F |
+| Command palette | ⌘ K |
+| Settings | ⌘ , |
 
-| Settings | Dashboard |
-| --- | --- |
-| <img src="docs/screenshots/realm-settings.png" alt="Realm settings view"> | <img src="docs/screenshots/realm-dashboard.png" alt="Realm dashboard view"> |
+---
 
-| macOS Installer |
-| --- |
-| <img src="docs/screenshots/realm-macos-installer.png" alt="Realm macOS installer window"> |
+[Report an issue](https://github.com/UDPING/Realm/issues) · [All releases](https://github.com/UDPING/Realm/releases) · [Earlier Windows build (0.1.0)](https://github.com/UDPING/Realm/releases/tag/v0.1.0)
 
-## Features
-
-- Native macOS app built with SwiftUI, Swift 6, Swift Concurrency, Observation, and MVVM.
-- Native Windows app built with WinUI 3, Windows App SDK, .NET 9, C#, MVVM Toolkit, and dependency injection.
-- Clean Architecture boundaries: Presentation, Application, Domain, Infrastructure, Services, Models, Utilities, and Resources.
-- Named account profiles with favorites, recent profiles, search, sort, duplication, deletion, notes, tags, and app association.
-- Local JSON persistence with atomic writes, automatic backups, and recovery from the latest valid backup.
-- Live application detection for installed, missing, running, version, install location, and last launch state.
-- Command palette with keyboard-first profile and app actions.
-- Native notifications, menus, context menus, keyboard shortcuts, and accessibility labels.
-- Dark-first Codex-inspired interface with a lighter sidebar, darker workspace canvas, native materials, compact profile rows, and clean iconography.
-- Settings for theme, accent color, language, startup behavior, workspace directory, logging, and update preferences.
-- English, Persian, and Russian interface copy.
-
-## Install
-
-### macOS
-
-Download the macOS installer:
-
-- [Realm-macOS.dmg](releases/v0.1.0/macOS/Realm-macOS.dmg)
-
-Open the DMG, drag `Realm.app` into `Applications`, then launch Realm. The DMG uses a custom Finder layout with a clean installation background.
-
-Checksums:
-
-```text
-2dc125805090651449952db03ddbda31e6a61f1d56bd7b2cc52018177897d201  Realm-macOS.dmg
-```
-
-### Windows
-
-Download the Windows installer:
-
-- [Realm-Windows.exe](releases/v0.1.0/Windows/Realm-Windows.exe)
-
-Run `Realm-Windows.exe` to install Realm into your local Programs folder and create a Start Menu shortcut. The Windows App SDK runtime is bundled with the app.
-
-Checksum:
-
-```text
-0c362cec3352b3044699f8860dab72519d65983f031a5fbb86aaedeab353f06c  Realm-Windows.exe
-```
-
-## Local Data
-
-Realm stores all data locally. There is no cloud dependency.
-
-macOS:
-
-```text
-~/Library/Application Support/Realm/
-~/Library/Logs/Realm/
-```
-
-Windows:
-
-```text
-%LOCALAPPDATA%\Realm\Data
-%LOCALAPPDATA%\Realm\Logs
-```
-
-Profile launches use isolated directories under the configured workspace directory. Existing Codex and Claude app bundles are not modified.
-
-## Keyboard Shortcuts
-
-| Action | macOS | Windows |
-| --- | --- | --- |
-| Command palette | Command+K | Ctrl+K |
-| New profile | Command+N | Ctrl+N |
-| Search | Command+F | Ctrl+F |
-| Settings | Command+, | Ctrl+, |
-| Delete profile | Command+Delete | Delete |
-| Pin profile | Command+Shift+F | Ctrl+Shift+F |
-
-## Source Availability
-
-The public repository is used for the product README, screenshots, design documentation, and release artifacts. Application source code is private for this release and is not pushed here.
-
-## Architecture
-
-Realm keeps platform UI native while preserving the same product architecture on macOS and Windows.
-
-```text
-Presentation    Native views, view models, reusable components, commands
-Application     Use cases and orchestration
-Domain          Entities, value objects, repository contracts
-Infrastructure  JSON persistence, logging, system app detection, launch adapters
-Services        Dependency composition and platform services
-Models          UI-facing models
-Utilities       Focused helpers and formatters
-Resources       Assets, localized copy, app icons, design tokens
-```
-
-Design and architecture references:
-
-- [Shared design system](Shared/DesignSystem.md)
-- [Shared architecture](Shared/Architecture.md)
-
-## Language Notes
-
-### English
-
-Realm keeps each Codex or Claude account in a named local profile so sessions, cache, logs, and workspace notes stay separate.
-
-### فارسی
-
-Realm برای هر حساب Codex یا Claude یک پروفایل محلی جدا می‌سازد تا نشست‌ها، کش، لاگ‌ها و یادداشت‌های کاری با هم تداخل نداشته باشند.
-
-### Русский
-
-Realm создает отдельные локальные профили для аккаунтов Codex и Claude, чтобы сессии, кэш, журналы и заметки рабочих пространств не смешивались.
-
-## Release Policy
-
-The public repository points to release artifacts and documentation. The source is not being pushed as open source in this step.
+<sub>This repository contains downloads and product documentation. Application source is private. Realm is an independent app and is not affiliated with OpenAI, Anthropic, Ollama, or LM Studio.</sub>
