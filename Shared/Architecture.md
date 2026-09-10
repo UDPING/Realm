@@ -39,11 +39,14 @@ Presentation contains native views, reusable components, command definitions, an
 
 Infrastructure implements file persistence, backups, recovery, logging, and platform adapters. It is injected into the application layer at startup.
 
+Local-model infrastructure has two adapters:
+
+- `MacLocalModelCatalogService` merges live Ollama and LM Studio API results with on-disk discovery when either server is offline.
+- `MacLocalCodexLaunchService` starts installed providers and launches the Codex CLI with an ephemeral `--oss` provider override, leaving user and project Codex configuration untouched.
+
 ## Dependency Injection
 
 macOS uses a lightweight `AppContainer` composed in `WorkspaceHubApp`.
-
-Windows uses `Microsoft.Extensions.DependencyInjection` in `App.xaml.cs`.
 
 ## Threading
 
@@ -52,3 +55,9 @@ UI state is updated on the main actor or dispatcher. Disk I/O, logging, backup, 
 ## Error Policy
 
 Errors are logged with structured context and surfaced to the UI through non-blocking banners or native alerts for destructive actions. Recovery errors never block app launch unless no workspace data can be read.
+
+## Account limits on macOS
+
+Codex checks use the app-server account APIs with each Realm profile’s own configuration. Claude checks read that profile’s own desktop sign-in and request usage from Claude. The cookie store is opened read-only, credentials remain in memory, redirects are disabled, and Realm never falls back to another profile or the default browser account. Background checks do not prompt for Keychain access; a visible Allow access action lets the user authorize access when required.
+
+The view model caches usage per profile and shares in-flight work. Claude caches successful responses for up to five minutes and backs off on rate limits. Missing or expired data stays unavailable until a fresh response arrives. Profile changes and sign-out invalidate the relevant cached credentials.
