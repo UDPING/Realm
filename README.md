@@ -8,9 +8,9 @@
   A native Mac app for Codex, Claude, and your local models.
 </p>
 <p align="center">
-  <a href="https://github.com/UDPING/Realm/releases/download/v0.2.3/Realm-macOS.dmg"><strong>Download for macOS</strong></a>
+  <a href="https://github.com/UDPING/Realm/releases/download/v0.2.4/Realm-macOS.dmg"><strong>Download for macOS</strong></a>
   &nbsp; · &nbsp;
-  <a href="https://github.com/UDPING/Realm/releases/tag/v0.2.3">What’s new in 0.2.3</a>
+  <a href="https://github.com/UDPING/Realm/releases/tag/v0.2.4">What’s new in 0.2.4</a>
 </p>
 <p align="center"><sub>Apple silicon · macOS 14 or later</sub></p>
 
@@ -56,13 +56,13 @@ Screenshots use sample accounts and usage data. Percentages show remaining capac
 
 ### Get started
 
-1. Download the [macOS installer](https://github.com/UDPING/Realm/releases/download/v0.2.3/Realm-macOS.dmg).
+1. Download the [macOS installer](https://github.com/UDPING/Realm/releases/download/v0.2.4/Realm-macOS.dmg).
 2. Open it and drag **Realm** to **Applications**. Quit an older copy before replacing it.
 3. Open Realm, create a Codex or Claude profile, and sign in through that app.
 
 Codex and Claude must be installed separately. Local chat requires Ollama or LM Studio and a downloaded model. Claude limits use the sign-in saved inside that Realm profile. Open the profile and sign in first; if prompted in Realm, choose **Allow access** to authorize the macOS Keychain read.
 
-This build is ad-hoc signed and is not Apple-notarized. macOS may require approval in **System Settings → Privacy & Security** on first launch. [Release notes and checksums](https://github.com/UDPING/Realm/releases/tag/v0.2.3) accompany every download.
+This build is ad-hoc signed and is not Apple-notarized. macOS may require approval in **System Settings → Privacy & Security** on first launch. [Release notes and checksums](https://github.com/UDPING/Realm/releases/tag/v0.2.4) accompany every download.
 
 ### Thoughtfully local
 
